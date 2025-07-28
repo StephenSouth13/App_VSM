@@ -1,34 +1,51 @@
 //src/components/auth/AuthInput.tsx
 import React from 'react';
-import { TextInput, View, Text, StyleSheet } from 'react-native';
+import { View, Text, TextInput, StyleSheet, KeyboardTypeOptions } from 'react-native';
 
-interface AuthInputProps {
+export interface AuthInputProps {
   label: string;
   value: string;
   onChangeText: (text: string) => void;
-  placeholder?: string;
+  keyboardType?: KeyboardTypeOptions;
   secureTextEntry?: boolean;
+  placeholder?: string;
 }
 
-const AuthInput = ({ label, value, onChangeText, placeholder, secureTextEntry = false }: AuthInputProps) => {
+const AuthInput: React.FC<AuthInputProps> = ({
+  label,
+  value,
+  onChangeText,
+  keyboardType = 'default',
+  secureTextEntry = false,
+  placeholder = ''
+}) => {
   return (
     <View style={styles.container}>
       <Text style={styles.label}>{label}</Text>
       <TextInput
-        style={styles.input}
-        placeholder={placeholder}
         value={value}
         onChangeText={onChangeText}
+        keyboardType={keyboardType}
         secureTextEntry={secureTextEntry}
-        placeholderTextColor="#aaa"
+        placeholder={placeholder}
+        style={styles.input}
+        placeholderTextColor="#888"
       />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  container: { marginBottom: 16 },
-  label: { fontSize: 14, fontWeight: '600', marginBottom: 4 },
+  container: {
+    marginVertical: 8,
+    width: '100%',
+  },
+  label: {
+    fontSize: 14,
+    fontWeight: '500',
+    marginBottom: 4,
+    color: '#333',
+  },
   input: {
     height: 48,
     borderWidth: 1,
@@ -36,6 +53,8 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     paddingHorizontal: 12,
     backgroundColor: '#fff',
+    fontSize: 16,
+    color: '#000',
   },
 });
 

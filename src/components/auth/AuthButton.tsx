@@ -1,28 +1,28 @@
 //src/components/auth/AuthButton.tsx
 import React from 'react';
-import { TouchableOpacity, Text, StyleSheet } from 'react-native';
+import { TouchableOpacity, Text, StyleSheet, ViewStyle } from 'react-native';
 
-interface AuthButtonProps {
-  title: string;
+export interface AuthButtonProps {
+  text: string;
   onPress: () => void;
+  style?: ViewStyle;
 }
 
-const AuthButton = ({ title, onPress }: AuthButtonProps) => {
+const AuthButton: React.FC<AuthButtonProps> = ({ text, onPress, style }) => {
   return (
-    <TouchableOpacity style={styles.button} onPress={onPress} activeOpacity={0.8}>
-      <Text style={styles.buttonText}>{title}</Text>
+    <TouchableOpacity onPress={onPress} style={[styles.button, style]}>
+      <Text style={styles.buttonText}>{text}</Text>
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   button: {
-    height: 48,
-    backgroundColor: '#1D4ED8',
-    borderRadius: 10,
+    backgroundColor: '#FF5A5F',
+    paddingVertical: 14,
+    borderRadius: 12,
     alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 8,
+    marginTop: 16,
   },
   buttonText: {
     color: '#fff',
