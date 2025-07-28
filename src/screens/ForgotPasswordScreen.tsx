@@ -1,8 +1,8 @@
 // src/screens/ForgotPasswordScreen.tsx
 import React, { useState } from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
-import AuthInput from '../components/auth/AuthInput';
-import AuthButton from '../components/auth/AuthButton';
+import AuthInput from '@/components/auth/AuthInput';
+import AuthButton from '@/components/auth/AuthButton';
 import { useNavigation } from '@react-navigation/native';
 
 const ForgotPasswordScreen = () => {

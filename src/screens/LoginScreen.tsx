@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, TouchableOpacity, Text } from 'react-native';
-import AuthInput from '../components/auth/AuthInput';
-import AuthButton from '../components/auth/AuthButton';
+import AuthInput from '@/components/auth/AuthInput';
+import AuthButton from '@/components/auth/AuthButton';
 import { useNavigation } from '@react-navigation/native';
 
 const LoginScreen = () => {
