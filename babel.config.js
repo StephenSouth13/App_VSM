@@ -12,6 +12,8 @@ module.exports = function (api) {
           },
         },
       ],
+      '@babel/plugin-syntax-flow',
     ],
   };
 };
+//assets/news/news1.jpg
