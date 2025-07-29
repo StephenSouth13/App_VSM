@@ -8,13 +8,13 @@ const NewsScreen = () => {
     {
       id: '1',
       title: 'Giải chạy VSM 2025 chính thức khởi động!',
-      image: require('@/assets/news1.jpg'),
+      image: require('@/assets/news/news1.jpg'),
       date: '27/07/2025',
     },
     {
       id: '2',
       title: 'Top runner của tháng 7 đã lộ diện!',
-      image: require('@/assets/news2.jpg'),
+      image: require('@/assets/news/news2.jpg'),
       date: '25/07/2025',
     },
   ];

@@ -37,7 +37,7 @@ const StoreScreen = () => {
       <Text style={styles.price}>{item.price}</Text>
     </TouchableOpacity>
   );
-
+//assets/store/cap1.png  src/screens/StoreScreen.tsx
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Cửa Hàng VSM</Text>
