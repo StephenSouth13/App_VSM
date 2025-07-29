@@ -13,6 +13,7 @@ const ProfileScreen = () => {
         <UserInfo />
         <CommunityGroups />
         <RunHistory />
+        <LogoutButton />
       </ScrollView>
       
     </MobileAppLayout>
